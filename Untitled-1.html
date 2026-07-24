@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Пори року</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        #title {
+            color: #2c3e50;
+        }
+        #text {
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            margin: 10px auto 20px;
+        }
+        #image {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://audiotech.netlify.app" target="_blank">Мій сайт</a>
+    
+    <h1 id="title">Літо</h1>
+    <p id="text">Літо — найтепліша пора року з довгими днями та яскравим сонечком.</p>
+
+    <!-- Початкова картинка: Літо -->
+    <img id="image" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Літо">
+
+    <div>
+        <button onclick="showSpring()">Весна</button>
+        <button onclick="showSummer()">Літо</button>
+        <button onclick="showAutumn()">Осінь</button>
+        <button onclick="showWinter()">Зима</button>
+    </div>
+
+    <script>
+        function showSpring() {
+            document.getElementById("title").innerText = "Весна";
+            document.getElementById("text").innerText = "Весна — це час, коли природа прокидається, розквітають квіти та прилітають птахи.";
+            document.getElementById("image").src = "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600";
+            document.getElementById("image").alt = "Весна";
+        }
+
+        function showSummer() {
+            document.getElementById("title").innerText = "Літо";
+            document.getElementById("text").innerText = "Літо — найтепліша пора року з довгими днями та яскравим сонечком.";
+            document.getElementById("image").src = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600";
+            document.getElementById("image").alt = "Літо";
+        }
+
+        function showAutumn() {
+            document.getElementById("title").innerText = "Осінь";
+            document.getElementById("text").innerText = "Осінь — це золота пора року, коли листя змінює колір, а дні стають прохолоднішими.";
+            // ВИПРАВЛЕНО: Посилання на осіннє фото
+            document.getElementById("image").src = "https://images.unsplash.com/photo-1507187632231-5beb21a654a2?w=600";
+            document.getElementById("image").alt = "Осінь";
+        }
+
+        function showWinter() {
+            document.getElementById("title").innerText = "Зима";
+            document.getElementById("text").innerText = "Зима — це казковий час снігу, морозів та новорічних свят.";
+            document.getElementById("image").src = "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=600";
+            document.getElementById("image").alt = "Зима";
+        }
+    </script>
+</body>
+</html>
